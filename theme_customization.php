@@ -148,6 +148,42 @@ function social_info_customize($wp_customize) {
 	        'section' => 'social_info', // refers to unique section tag
 	        'type'    => 'text',
 	    ) );
+
+	    
+ 		// INSTAGRAM
+	    $wp_customize->add_setting( 'social_instagram', array( //field tag, needs to be unique
+	        'default' => '',
+	    ) );
+	 
+	    $wp_customize->add_control( 'social_instagram', array( //field tag, needs to be unique
+	        'label'   => 'Instagram URL', // Form Label
+	        'section' => 'social_info', // refers to unique section tag
+	        'type'    => 'text',
+	    ) );
+ 
+
+ 		// VIMEO
+	    $wp_customize->add_setting( 'social_vimeo', array( //field tag, needs to be unique
+	        'default' => '',
+	    ) );
+	 
+	    $wp_customize->add_control( 'social_vimeo', array( //field tag, needs to be unique
+	        'label'   => 'Vimeo URL', // Form Label
+	        'section' => 'social_info', // refers to unique section tag
+	        'type'    => 'text',
+	    ) );
+ 
+
+ 		// IMDb
+	    $wp_customize->add_setting( 'social_imdb', array( //field tag, needs to be unique
+	        'default' => '',
+	    ) );
+	 
+	    $wp_customize->add_control( 'social_imdb', array( //field tag, needs to be unique
+	        'label'   => 'IMDB URL', // Form Label
+	        'section' => 'social_info', // refers to unique section tag
+	        'type'    => 'text',
+	    ) );
  
 }
 
