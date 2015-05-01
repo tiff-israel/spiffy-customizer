@@ -120,7 +120,7 @@ function social_info_customize($wp_customize) {
 	    ) );
 	 
 	    $wp_customize->add_control( 'social_facebook', array( //field tag, needs to be unique
-	        'label'   => 'Facebook Page Username (not the url)', // Form Label
+	        'label'   => 'Facebook Page URL', // Form Label
 	        'section' => 'social_info', // refers to unique section tag
 	        'type'    => 'text',
 	    ) );

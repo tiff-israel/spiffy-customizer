@@ -54,7 +54,7 @@ function spiffy_phone_number( $atts, $content = null )  {
 		$output .= '<li>';
 	}
 	if($ligature == 'true'){
-		$output .= '<span class="lsf">phone</span>';
+		$output .= '<span class="lsf">phone</span>';facebook.com/
 	}
 
 	if($text == 'true'){
@@ -120,9 +120,9 @@ function spiffy_facebook( $atts, $content = null ) {
 	if (get_theme_mod('social_facebook') != "") { 
 
 		if($text == 'true'){
-			$output .= '<a href="http://www.'.get_theme_mod('social_facebook').'" title="Like us on facebook" target="blank">'.get_theme_mod('social_facebook').'</a>';
+			$output .= '<a href="'.get_theme_mod('social_facebook').'" title="Like us on facebook" target="blank">'.get_theme_mod('social_facebook').'</a>';
 		} elseif ($text == 'false') {
-			$output .= '<a href="http://www.'.get_theme_mod('social_facebook').'" title="Like us on facebook" target="blank"><span class="lsf">'.$icon.'</span></a>';
+			$output .= '<a href="'.get_theme_mod('social_facebook').'" title="Like us on facebook" target="blank"><span class="lsf">'.$icon.'</span></a>';
 		}
 	}
 	
