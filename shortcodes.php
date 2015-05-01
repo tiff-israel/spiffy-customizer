@@ -88,8 +88,17 @@ function spiffy_address($atts, $content = null )  {
 	}
 
 	if($text == 'true'){
-		$output .= ''.get_theme_mod('contact_address').'<br/><span class="lsf blank">mail</span>'.get_theme_mod('contact_city').', '.get_theme_mod('contact_state').' '.get_theme_mod('contact_zip').'';
+		$output .= ''.get_theme_mod('contact_address').'<br/>';
 	}
+
+	if($ligature == 'true'){
+		$output .= '<span class="lsf blank">mail</span>';
+	}
+
+	if($text == 'true'){
+		$output .= get_theme_mod('contact_city').', '.get_theme_mod('contact_state').' '.get_theme_mod('contact_zip').'';
+	}
+	
 
 	if($list == 'true'){
 		$output .= '</li>';
