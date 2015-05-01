@@ -54,7 +54,7 @@ function spiffy_phone_number( $atts, $content = null )  {
 		$output .= '<li>';
 	}
 	if($ligature == 'true'){
-		$output .= '<span class="lsf">phone</span>';facebook.com/
+		$output .= '<span class="lsf">phone</span>';
 	}
 
 	if($text == 'true'){
