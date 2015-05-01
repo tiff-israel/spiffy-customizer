@@ -55,8 +55,6 @@ function spiffy_phone_number( $atts, $content = null )  {
 	}
 	if($ligature == 'true'){
 		$output .= '<span class="lsf">phone</span>';
-	} else {
-		echo 'hllo';
 	}
 
 	if($text == 'true'){
