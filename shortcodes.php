@@ -108,6 +108,37 @@ function spiffy_address($atts, $content = null )  {
 add_shortcode( 'address', 'spiffy_address' );
 
 
+
+// Google Map Link
+function spiffy_map_link( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+		'text' => 'true',
+		'list' => 'false',
+		'ligature' => 'false',
+		'icon' => '@',
+		), $atts ) );
+
+	$output = '';
+
+	if($list == 'true'){
+		$output .= '<li>';
+	}
+	if($ligature == 'true'){
+		$output .= '<span class="lsf">'.$icon.'</span>';
+	}
+
+	if($text == 'true'){
+		$output .= get_theme_mod('contact_google_url');
+	}
+
+	if($list == 'true'){
+		$output .= '</li>';
+	}
+	return $output;
+}
+add_shortcode( 'map_link', 'spiffy_map_link' );
+
+
 // Facebook
 function spiffy_facebook( $atts, $content = null ) {
 	extract( shortcode_atts( array(
