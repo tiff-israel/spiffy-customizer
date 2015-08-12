@@ -109,6 +109,66 @@ add_shortcode( 'address', 'spiffy_address' );
 
 
 
+//Street Address
+function spiffy_address_street($atts, $content = null )  {
+	extract( shortcode_atts( array(
+		'text' => 'true',
+		'list' => 'false',
+		'ligature' => 'false',
+		'icon' => 'pin',
+		), $atts ) );
+
+	$output = '';
+
+	if($list == 'true'){
+		$output .= '<li>';
+	}
+	if($ligature == 'true'){
+		$output .= '<span class="lsf">'.$icon.'</span>';
+	}
+
+	if($text == 'true'){
+		$output .= ''.get_theme_mod('contact_address');
+	}
+
+	if($list == 'true'){
+		$output .= '</li>';
+	}
+	return $output;
+}
+add_shortcode( 'address_street', 'spiffy_address_street' );
+
+
+//Address 
+function spiffy_address_citystatezip($atts, $content = null )  {
+	extract( shortcode_atts( array(
+		'text' => 'true',
+		'list' => 'false',
+		'ligature' => 'false',
+		'icon' => 'pin',
+		), $atts ) );
+
+	$output = '';
+
+	if($list == 'true'){
+		$output .= '<li>';
+	}
+	if($ligature == 'true'){
+		$output .= '<span class="lsf">'.$icon.'</span>';
+	}
+
+	if($text == 'true'){
+		$output .= get_theme_mod('contact_city').', '.get_theme_mod('contact_state').' '.get_theme_mod('contact_zip').'';
+	}
+	
+
+	if($list == 'true'){
+		$output .= '</li>';
+	}
+	return $output;
+}
+add_shortcode( 'address_citystatezip', 'spiffy_address_citystatezip' );
+
 // Google Map Link
 function spiffy_map_link( $atts, $content = null ) {
 	extract( shortcode_atts( array(
